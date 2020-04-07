@@ -1,4 +1,6 @@
-Sky challenge
+# Sky challenge
+Simple full stack application build with React and node.js.
+Try it out at https://spam-filter.suvorovalex.com/
 
-Cluster: https://cloud.mongodb.com/v2/5e8c4b02906a771e909b1aa0#clusters
-Heroku app name: glacial-gorge-15457
+## Mongo cluster
+https://cloud.mongodb.com/v2/5e8c4b02906a771e909b1aa0#clusters
