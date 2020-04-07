@@ -8,6 +8,7 @@ const details = require("./controllers/details");
 const items = require("./controllers/items");
 
 const config = require("./config");
+const PORT = process.env.PORT || config.port;
 
 const app = express();
 
@@ -43,6 +44,6 @@ details(app);
 items(app);
 
 // App running
-app.listen(config.port, function () {
-  console.log("Spam Filter API app is listening on port " + config.port);
+app.listen(PORT, function () {
+  console.log("Spam Filter API app is listening on port " + PORT);
 });

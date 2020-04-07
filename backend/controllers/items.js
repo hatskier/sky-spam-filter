@@ -10,7 +10,7 @@ const DEFAULT_ITEMS = [
 ];
 
 module.exports = function(app) {
-  app.get("/api/items", asyncHandler(async function(req, res) {
+  app.get("/api/items", asyncHandler(async (req, res) => {
     const allItems = await Item.find();
     res.json(allItems);
   }));
