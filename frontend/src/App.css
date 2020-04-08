@@ -63,3 +63,7 @@
   left: 3px;
   position: relative;
 } 
+
+.App-circle-data-loader {
+  width: 50px;
+}

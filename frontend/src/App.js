@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 // import logo from './logo.svg';
 import GrayLoader from './gray-circle-loader.svg';
+import GreenLoader from './green-circle-loader.svg';
 import './App.css';
 import ReactTooltip from 'react-tooltip';
 import api from './api';
@@ -11,10 +12,12 @@ const toastr = window.toastr;
 
 function App() {
   const [items, setItems] = useState([]);
+  const [dataLoaded, setDataLoaded] = useState(false);
   const [currentAction, setCurrentAction] = useState('');
 
   async function load() {
     setItems(await api.getItems());
+    setDataLoaded(true);
   }
 
   async function resetState() {
@@ -61,6 +64,13 @@ function App() {
           }
         </span>
       </div>
+
+      {
+        !dataLoaded ?
+        <img className="App-circle-data-loader" alt="green-circle-loader" src={GreenLoader} />
+        :
+        null
+      }
 
       {visibleItems()}
 
